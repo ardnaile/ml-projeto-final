@@ -4,9 +4,9 @@ Projeto final da matéria de Machine Learning. O objetivo é escolher um dataset
 
 ### Integrantes 
 
-- Artur
+- Artur 
 - [Eliandra Cardoso](https://github.com/ardnaile)
-- Juliano
+- [Juliano Cardoso Felipe](https://github.com/julianocfelipe)
 - [Rafael Rodrigues](https://github.com/Rafael171022)
 - [Wallace Mendes](https://github.com/WallaceB2)
 
