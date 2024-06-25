@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Preveja os dados</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/landing-page.min.css" rel="stylesheet">
+  <style> .table {color:white;} </style>
+
+</head>
+
+<body>
+
+  <!-- Masthead -->
+
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xl-9 mx-auto">
+
+          <h1 class="mb-5">Preveja os dados</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form method="POST" action="/cs">
+            <div class="form-row">
+              <!-- Pregnancies	Glucose	BloodPressure	SkinThickness	Insulin	BMI	DiabetesPedigreeFunction	Age -->
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="Pregnancies" list="browsers" type="text" class="form-control form-control-lg" placeholder="Pregancies">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="Glucose" list="browsers" type="text" class="form-control form-control-lg" placeholder="Glucose">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="BloodPressure" list="browsers" type="text" class="form-control form-control-lg" placeholder="Blood Pressure">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="SkinThickness" list="browsers" type="text" class="form-control form-control-lg" placeholder="Skin Thickness">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="Insulin" list="browsers" type="text" class="form-control form-control-lg" placeholder="Insulin">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="BMI" list="browsers" type="text" class="form-control form-control-lg" placeholder="BMI">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="DiabetesPedigreeFunction" list="browsers" type="text" class="form-control form-control-lg" placeholder="Diabetes Pedigree Function">
+              </div>
+              <div class="col-12 col-md-6 mb-2 mb-md-0">
+                <input style="margin-bottom: 10px;" name="Age" list="browsers" type="text" class="form-control form-control-lg" placeholder="Age">
+              </div>
+              <div class="col-12 col-md-12">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Prever</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="card" style="
+                margin-top: 10px;
+                border: 1px solid red;
+                color: black;
+                font-size: 30px;
+            ">
+              {% if result %}
+                {{ data | safe }}
+              {% else %}
+                ...
+              {% endif %}
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
